@@ -21,11 +21,12 @@
             </a>
 
             <ul class="nav nav-pills">
-                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="/" class="nav-link" :active="request() - > is('/')">Home</a>
+                </li>
+                <li class="nav-item"><a href="news" class="nav-link" :active="request() - > is('/news')">News</a>
+                </li>
+                <li class="nav-item"><a href="about" class="nav-link" :active="request() - > is('/about')">About</a>
+                </li>
             </ul>
         </header>
     </div>
