@@ -17,6 +17,14 @@ Route::get('/news', function () {
     ]);
 });
 
+Route::get('/news/{id}', function ($id) {
+    $post = Post::find($id);
+    
+    return view('news_article',[
+        'post' => $post
+    ]);
+});
+
 Route::get('/about', function () {
     return view('about');
 });

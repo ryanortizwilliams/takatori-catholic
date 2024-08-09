@@ -21,8 +21,8 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav ms-auto mb-2 mb-md-0">
                     <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
-                    <x-nav-link href="news" :active="request()->is('news')">News</x-nav-link>
-                    <x-nav-link href="about" :active="request()->is('about')">About</x-nav-link>
+                    <x-nav-link href="/news" :active="request()->is('news')">News</x-nav-link>
+                    <x-nav-link href="/about" :active="request()->is('about')">About</x-nav-link>
                 </ul>
                 {{-- maybe add search later --}}
                 {{-- <form class="d-flex">
