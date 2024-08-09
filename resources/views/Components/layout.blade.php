@@ -11,23 +11,29 @@
 </head>
 
 <body>
-    <div class="container">
-        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                <svg class="bi me-2" width="40" height="32">
-                    <use xlink:href="#bootstrap"></use>
-                </svg>
-                <span class="fs-4">Simple header</span>
-            </a>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Takatokri Catholic Church</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                    <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
+                    <x-nav-link href="news" :active="request()->is('news')">News</x-nav-link>
+                    <x-nav-link href="about" :active="request()->is('about')">About</x-nav-link>
+                </ul>
+                {{-- maybe add search later --}}
+                {{-- <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form> --}}
+            </div>
+        </div>
+    </nav>
 
-            <ul class="nav nav-pills">
-                <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
-                <x-nav-link href="news" :active="request()->is('news')">News</x-nav-link>
-                <x-nav-link href="about" :active="request()->is('about')">About</x-nav-link>
-            </ul>
-        </header>
-    </div>
-    <main>
+    <main class="container pt-5 mt-5">
         {{ $slot }}
     </main>
 </body>
