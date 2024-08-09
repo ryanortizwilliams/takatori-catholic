@@ -13,6 +13,13 @@
         <div class="container">
             <h1>Home page</h1>
 
+            <div class="container">
+                @foreach ($posts as $post)
+                    <p>{{ $post->title }}</p>
+                @endforeach
+
+            </div>
+
         </div>
     </x-layout>
 </body>
