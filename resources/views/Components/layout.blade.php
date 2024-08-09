@@ -21,12 +21,9 @@
             </a>
 
             <ul class="nav nav-pills">
-                <li class="nav-item"><a href="/" class="nav-link" :active="request() - > is('/')">Home</a>
-                </li>
-                <li class="nav-item"><a href="news" class="nav-link" :active="request() - > is('/news')">News</a>
-                </li>
-                <li class="nav-item"><a href="about" class="nav-link" :active="request() - > is('/about')">About</a>
-                </li>
+                <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
+                <x-nav-link href="news" :active="request()->is('news')">News</x-nav-link>
+                <x-nav-link href="about" :active="request()->is('about')">About</x-nav-link>
             </ul>
         </header>
     </div>
